@@ -7,12 +7,15 @@ public class Recursion {
 
     public Recursion(int num) {
         this.num = num;
+    }
+
+    public void printInfo() {
         printNum(num);
         System.out.println();
         System.out.println("The sum of numbers from 0 to " + this.num + " is: " + sumNum(num));
     }
 
-    public void printNum(int num) {
+    private void printNum(int num) {
         if (num == 0) {
             System.out.println();
             return;
@@ -22,7 +25,7 @@ public class Recursion {
         }
     }
 
-    public int sumNum(int num) {
+    private int sumNum(int num) {
         if (num != 0) {
             sum += num;
             return sumNum(num - 1);
